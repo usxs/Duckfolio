@@ -15,18 +15,44 @@ export function Footer({ name }: FooterProps) {
       <p className="mb-2">
         © {new Date().getFullYear()} {name}. All rights reserved.
       </p>
+
+      {/* 备案信息栏 */}
+      <div className="flex flex-col md:flex-row justify-center items-center gap-x-4 gap-y-1 mb-4 opacity-80">
+        <a 
+          href="https://beian.miit.gov.cn/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="hover:text-[var(--theme-primary)] transition-colors"
+        >
+          冀ICP备2024060177号-1
+        </a>
+        <a 
+          href="http://www.beian.gov.cn/portal/registerSystemInfo" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center hover:text-[var(--theme-primary)] transition-colors"
+        >
+          <img 
+            src="https://img.alicdn.com/tfs/TB1.._Zxlb0gK0jSZFnXXaxuVXa-24-24.png" 
+            alt="公安备案图标" 
+            className="w-4 h-4 mr-1 inline-block"
+          />
+          冀公网安备 13010202004068 号
+        </a>
+      </div>
+
       <div className="flex justify-center space-x-4">
         <a
-          href="https://github.com/Yorlg"
+          href="https://github.com/usxs"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-[var(--theme-primary)]  dark:hover:text-[var(--theme-secondary)] transition-colors"
         >
-          Yorlg
+          ZhangXingYu
         </a>
         <span>•</span>
         <a
-          href="https://github.com/Yorlg/Duckfolio"
+          href="https://github.com/usxs/Duckfolio"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-[var(--theme-primary)]  dark:hover:text-[var(--theme-secondary)] transition-colors"
