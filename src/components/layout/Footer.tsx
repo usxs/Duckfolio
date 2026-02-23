@@ -12,12 +12,8 @@ export function Footer({ name }: FooterProps) {
       transition={{ duration: 0.6, delay: 0.8 }}
       className="relative z-10 py-6 mt-auto text-center text-[#121212]/60 dark:text-white/60 text-sm"
     >
-      <p className="mb-2">
-        © {new Date().getFullYear()} {name}. All rights reserved.
-      </p>
-
-      {/* 备案信息栏 */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-x-4 gap-y-1 mb-4 opacity-80">
+      {/* 1. 备案信息栏（已移动至最上方） */}
+      <div className="flex flex-col md:flex-row justify-center items-center gap-x-4 gap-y-1 mb-3 opacity-80">
         <a 
           href="https://beian.miit.gov.cn/" 
           target="_blank" 
@@ -27,13 +23,13 @@ export function Footer({ name }: FooterProps) {
           冀ICP备2024060177号-1
         </a>
         <a 
-          href="http://www.beian.gov.cn/portal/registerSystemInfo" 
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13010202004068" 
           target="_blank" 
           rel="noopener noreferrer"
           className="flex items-center hover:text-[var(--theme-primary)] transition-colors"
         >
           <img 
-            src="https://img.alicdn.com/tfs/TB1.._Zxlb0gK0jSZFnXXaxuVXa-24-24.png" 
+            src="/gongan.png" 
             alt="公安备案图标" 
             className="w-4 h-4 mr-1 inline-block"
           />
@@ -41,6 +37,12 @@ export function Footer({ name }: FooterProps) {
         </a>
       </div>
 
+      {/* 2. 版权信息 */}
+      <p className="mb-2">
+        © {new Date().getFullYear()} {name}. All rights reserved.
+      </p>
+
+      {/* 3. 底部链接 */}
       <div className="flex justify-center space-x-4">
         <a
           href="https://github.com/usxs"
